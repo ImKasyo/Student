@@ -45,11 +45,11 @@ public:
 	const char* getGroup() const {
 		return group;
 	}
-		
+
 	void setFullName(const char* _fullName) {
-		delete[] fullName;  
-		fullName = new char[strlen(_fullName) + 1];  
-		strcpy_s(fullName, strlen(_fullName) + 1, _fullName);  
+		delete[] fullName;
+		fullName = new char[strlen(_fullName) + 1];
+		strcpy_s(fullName, strlen(_fullName) + 1, _fullName);
 	}
 
 	void setDateOfBirth(const char* _dateOfBirth) {
@@ -85,8 +85,12 @@ public:
 
 	};
 
-
-	// Реализуйте функции-члены класса для ввода данных, вывода данных, реализуйте
-	// аксессоры для доступа к отдельным переменным-членам.
-	// Добавьте необходимые конструкторы, деструктор.
+	void Show() {
+		cout << fullName << dateOfBirth << phoneNumber << institution << group;
+	}
+		
 };
+
+int main() {
+
+}
