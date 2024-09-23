@@ -13,7 +13,7 @@ public:
 	Student() {
 		fullName, dateOfBirth, phoneNumber, institution, group = nullptr;
 	}
-	Student(const char * _fullName, const char * _dateOfBirth, const char * _phoneNumber, const char *_institution, const char * _group) {
+	Student(const char* _fullName, const char* _dateOfBirth, const char* _phoneNumber, const char* _institution, const char* _group) {
 		fullName = new char[strlen(_fullName) + 1];
 		strcpy_s(fullName, strlen(_fullName) + 1, _fullName);
 
@@ -29,7 +29,23 @@ public:
 		group = new char[strlen(_group) + 1];
 		strcpy_s(group, strlen(_group) + 1, _group);
 	}
-	
+
+	const char* getFullName() const {
+		return fullName;
+	}
+	const char* getDateOfBirth() const {
+		return dateOfBirth;
+	}
+	const char* getPhoneNumber() const {
+		return phoneNumber;
+	}
+	const char* getInstitution() const {
+		return institution;
+	}
+	const char* etGroup() const {
+		return group;
+	}
+
 	~Student()
 	{
 		if (fullName, dateOfBirth, phoneNumber, institution, group != nullptr)
@@ -37,28 +53,11 @@ public:
 			delete[] fullName, dateOfBirth, phoneNumber, institution, group;
 		}
 
-		const char* getFullName() const {
-			return fullName;
-		}
-		const char* getDateOfBirth() const {
-			return dateOfBirth;
-		}
-		const char* getPhoneNumber() const {
-			return phoneNumber;
-		}
-		const char* getInstitution() const {
-			return institution;
-		}
-		const char* etGroup() const {
-			return group;
-		}
+
+	};
 
 
+	// Реализуйте функции-члены класса для ввода данных, вывода данных, реализуйте
+	// аксессоры для доступа к отдельным переменным-членам.
+	// Добавьте необходимые конструкторы, деструктор.
 };
-
-// Реализуйте функции-члены класса для ввода данных, вывода данных, реализуйте
-// аксессоры для доступа к отдельным переменным-членам.
-// Добавьте необходимые конструкторы, деструктор.
-int main(){
-	
-}
