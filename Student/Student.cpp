@@ -30,7 +30,14 @@ public:
 		strcpy_s(group, strlen(_group) + 1, _group);
 	}
 	
+	~Student()
+	{
+		if (fullName, dateOfBirth, phoneNumber, institution, group != nullptr)
+		{
+			delete[] fullName, dateOfBirth, phoneNumber, institution, group;
+		}
 };
+
 // Реализуйте функции-члены класса для ввода данных, вывода данных, реализуйте
 // аксессоры для доступа к отдельным переменным-членам.
 // Добавьте необходимые конструкторы, деструктор.
