@@ -42,8 +42,38 @@ public:
 	const char* getInstitution() const {
 		return institution;
 	}
-	const char* etGroup() const {
+	const char* getGroup() const {
 		return group;
+	}
+		
+	void setFullName(const char* _fullName) {
+		delete[] fullName;  
+		fullName = new char[strlen(_fullName) + 1];  
+		strcpy_s(fullName, strlen(_fullName) + 1, _fullName);  
+	}
+
+	void setDateOfBirth(const char* _dateOfBirth) {
+		delete[] dateOfBirth;
+		dateOfBirth = new char[strlen(_dateOfBirth) + 1];
+		strcpy_s(dateOfBirth, strlen(_dateOfBirth) + 1, _dateOfBirth);
+	}
+
+	void setPhoneNumber(const char* _phoneNumber) {
+		delete[] phoneNumber;
+		phoneNumber = new char[strlen(_phoneNumber) + 1];
+		strcpy_s(phoneNumber, strlen(_phoneNumber) + 1, _phoneNumber);
+	}
+
+	void setInstitution(const char* _institution) {
+		delete[] institution;
+		institution = new char[strlen(_institution) + 1];
+		strcpy_s(institution, strlen(_institution) + 1, _institution);
+	}
+
+	void setGroup(const char* _group) {
+		delete[] group;
+		group = new char[strlen(_group) + 1];
+		strcpy_s(group, strlen(_group) + 1, _group);
 	}
 
 	~Student()
@@ -52,7 +82,6 @@ public:
 		{
 			delete[] fullName, dateOfBirth, phoneNumber, institution, group;
 		}
-
 
 	};
 
