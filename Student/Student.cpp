@@ -36,6 +36,24 @@ public:
 		{
 			delete[] fullName, dateOfBirth, phoneNumber, institution, group;
 		}
+
+		const char* getFullName() const {
+			return fullName;
+		}
+		const char* getDateOfBirth() const {
+			return dateOfBirth;
+		}
+		const char* getPhoneNumber() const {
+			return phoneNumber;
+		}
+		const char* getInstitution() const {
+			return institution;
+		}
+		const char* etGroup() const {
+			return group;
+		}
+
+
 };
 
 // Реализуйте функции-члены класса для ввода данных, вывода данных, реализуйте
