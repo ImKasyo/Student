@@ -1,5 +1,5 @@
 #include <iostream>
-#include<Windows.h>
+#include <Windows.h>
 using namespace std;
 
 class Student {
@@ -13,15 +13,27 @@ public:
 	Student() {
 		fullName, dateOfBirth, phoneNumber, institution, group = nullptr;
 	}
-	Student(const char * name, const char * dateOfBirth, const char * phoneNumber, ) {
-		fullName = new char[strlen(fullName) +1];
-		strcpy_s(fullName, strlen(fullName) + 1, name);
+	Student(const char * _fullName, const char * _dateOfBirth, const char * _phoneNumber, const char *_institution, const char * _group) {
+		fullName = new char[strlen(_fullName) + 1];
+		strcpy_s(fullName, strlen(_fullName) + 1, _fullName);
+
+		dateOfBirth = new char[strlen(_dateOfBirth) + 1];
+		strcpy_s(dateOfBirth, strlen(_dateOfBirth) + 1, _dateOfBirth);
+
+		phoneNumber = new char[strlen(_phoneNumber) + 1];
+		strcpy_s(phoneNumber, strlen(_phoneNumber) + 1, _phoneNumber);
+
+		institution = new char[strlen(_institution) + 1];
+		strcpy_s(institution, strlen(_institution) + 1, _institution);
+
+		group = new char[strlen(_group) + 1];
+		strcpy_s(group, strlen(_group) + 1, _group);
 	}
 	
 };
-// Р РµР°Р»РёР·СѓР№С‚Рµ С„СѓРЅРєС†РёРё-С‡Р»РµРЅС‹ РєР»Р°СЃСЃР° РґР»СЏ РІРІРѕРґР° РґР°РЅРЅС‹С…, РІС‹РІРѕРґР° РґР°РЅРЅС‹С…, СЂРµР°Р»РёР·СѓР№С‚Рµ
-// Р°РєСЃРµСЃСЃРѕСЂС‹ РґР»СЏ РґРѕСЃС‚СѓРїР° Рє РѕС‚РґРµР»СЊРЅС‹Рј РїРµСЂРµРјРµРЅРЅС‹Рј-С‡Р»РµРЅР°Рј.
-// Р”РѕР±Р°РІСЊС‚Рµ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹, РґРµСЃС‚СЂСѓРєС‚РѕСЂ.
+// Реализуйте функции-члены класса для ввода данных, вывода данных, реализуйте
+// аксессоры для доступа к отдельным переменным-членам.
+// Добавьте необходимые конструкторы, деструктор.
 int main(){
-
+	
 }
