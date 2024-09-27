@@ -92,6 +92,13 @@ public:
 		cout << fullName << dateOfBirth << phoneNumber << institution << group;
 	}
 
+	void Input(char* fullName, char* dateOfBirth, char* phoneNumber, char* institution, char* group) {
+		this->fullName = fullName;
+		this->dateOfBirth = dateOfBirth;
+		this->phoneNumber = phoneNumber;
+		this->institution = institution;
+		this->group = group;
+	}
 		
 };
 
