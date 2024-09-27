@@ -53,6 +53,7 @@ public:
 		fullName = new char[strlen(_fullName) + 1];
 		strcpy_s(fullName, strlen(_fullName) + 1, _fullName);
 	}
+	//ѕочему const? ѕотому что данные на которые указывает указатель _fullName, не будут измен€тьс€ внутри метода
 
 	void setDateOfBirth(const char* _dateOfBirth) {
 		delete[] dateOfBirth;
