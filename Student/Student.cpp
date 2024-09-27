@@ -30,9 +30,11 @@ public:
 		strcpy_s(group, strlen(_group) + 1, _group);
 	}
 
-	const char* getFullName(){
+	const char* getFullName(){ 
 		return fullName;
 	}
+	// Почему const? Данные на которые указывает возвращаемый указатель, не могут быть изменены через этот указатель
+	//т.е строка group будет доступна только для чтения
 	const char* getDateOfBirth(){
 		return dateOfBirth;
 	}
