@@ -30,19 +30,19 @@ public:
 		strcpy_s(group, strlen(_group) + 1, _group);
 	}
 
-	const char* getFullName() const {
+	const char* getFullName(){
 		return fullName;
 	}
-	const char* getDateOfBirth() const {
+	const char* getDateOfBirth(){
 		return dateOfBirth;
 	}
-	const char* getPhoneNumber() const {
+	const char* getPhoneNumber(){
 		return phoneNumber;
 	}
-	const char* getInstitution() const {
+	const char* getInstitution(){
 		return institution;
 	}
-	const char* getGroup() const {
+	const char* getGroup(){
 		return group;
 	}
 
@@ -88,6 +88,7 @@ public:
 	void Show() {
 		cout << fullName << dateOfBirth << phoneNumber << institution << group;
 	}
+
 		
 };
 
